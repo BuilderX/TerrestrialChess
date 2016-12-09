@@ -6,7 +6,11 @@
    	   POWERUPS:4
    }        
 function TurnPhases(){}
+function TurnPhases(){}
+
 function rules(gamePiece){
+	
+	if(typeof gamePiece === 'function'){
 	   switch(gamePiece.position){
 	   	  case mapRules.LAND:
 	   	  	   landBehavior(gamePiece);
@@ -26,8 +30,9 @@ function rules(gamePiece){
 	   	  default:
 	   	    console.log('No Position');
 	   }
-	
+	}
 }
+
 
 function validateRules(){
 	 
