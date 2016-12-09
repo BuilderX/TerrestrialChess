@@ -1,10 +1,12 @@
-function PlayerPiece(h,r,c){
+function gamePiece(h,r,c){
 	  this.hp = h;
+	  this.range = r;
+	  this.color = c;
+	 
 	  this.moves = 0;
 	  this.moved = false;
 	  this.canMove = false;
-	  this.range = r;
-	  this.color = c;
+	 
 	  this.abilities = [];
 	  this.currentPosition = {x:0,y:0};
 	  
@@ -13,11 +15,13 @@ function PlayerPiece(h,r,c){
               this.canMove = true;	
 	    }
 	  }
+	  
 	  this.setPosition = function(x,y){
 	  	      this.currentPosition.x = x;
 	  	      this.currentPosition.y = y;
 	  }
 	  this.move = function(fn,direction,numberOfMoves){
+	  	if (typeof numberOfMoves === 'Number' ){
 	  	    var north =direction.N.x = numberOfMoves;
 	  		var west  =direction.W.y =-numberOfMoves;
 	  		var east  =direction.E.y =-numberOfMoves;
@@ -42,14 +46,7 @@ function PlayerPiece(h,r,c){
 	  			break;
 	  		}
 	  		
-	  	
+	  	}
 	  }
 }    
-   
-   var direction = {
-   		N:{x:1,y:0},
-   		E:{x:0,y:1},
-   		W:{x:0,y:-1},
-   		S:{x:1,y:0}
-   };
    
