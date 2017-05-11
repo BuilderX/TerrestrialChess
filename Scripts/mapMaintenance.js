@@ -11,12 +11,6 @@ function searchMap(target){
 	
 }
 
-
-
-
-
-
-
 function updateMap(target){
 	var current;
 	for(var i = 0; i < map.lenth;i++){
@@ -29,9 +23,6 @@ function updateMap(target){
 	}
 	
 }
-
-
-
 
 // links the data and images together
 function setUpMap(){
@@ -51,8 +42,6 @@ function setUpMap(){
   	 }
 	}
 	map.collisionData = collisionData;
-	
-	
 }
 
 
