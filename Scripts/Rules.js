@@ -6,7 +6,6 @@
    	   POWERUPS:4
    }        
 function TurnPhases(){}
-function TurnPhases(){}
 
 function rules(gamePiece){
 	
@@ -32,7 +31,6 @@ function rules(gamePiece){
 	   }
 	}
 }
-
 
 function validateRules(){
 	 
